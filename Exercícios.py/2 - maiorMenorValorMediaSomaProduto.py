@@ -17,7 +17,7 @@ produto = numero1 * numero2
 
 if numero1 < numero2:
     maiorValor = numero2
-    menorvalor = numero1
+    menorValor = numezro1
 elif numero2 < numero1:
     menorValor = numero2
     maiorValor = numero1
