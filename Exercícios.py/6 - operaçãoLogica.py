@@ -12,7 +12,7 @@ operacao = str(input("Digite a operação(*+-/): "))
 
 if operacao == "*":
     resultado = numero1 * numero2
-    
+
 elif operacao == "+":
     resultado = numero1 + numero2
 
