@@ -12,10 +12,10 @@ while escolha == True:
 
     nota = float(input("Digite suas notas: "));
     quantidadeDeNotas += 1;
-#---------------------------------------------------------------------------------------------------
+
     contador += 1;
     soma += nota;
-#---------------------------------------------------------------------------------------------------
+
     escolha2 = str(input("Você quer mais notas: "));
 
     os.system("cls || clear");
@@ -28,7 +28,7 @@ while escolha == True:
 
     elif escolha2 == "p":
         print(f"Quantidade de notas: {quantidadeDeNotas}");
-#---------------------------------------------------------------------------------------------------
+
 media = soma / contador;
 
 print(f"Media: {media}");
