@@ -16,7 +16,7 @@ for i in range(TOTALDENUMEROS):
     else: 
         contadorImpar += 1
 
-    if numeros < 0:
+    if numeros > 0:
         contadorPos +=1
     else:
         contadorNeg +=1
