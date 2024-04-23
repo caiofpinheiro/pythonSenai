@@ -3,13 +3,14 @@ import os
 os.system("cls")
 
 num =[]
-contador = 0
-force = 0
 
-while num[i] > 0 and num[i] % 2 == 0:
-    for i in range(1,7):
-        numeros = int(input(f"Digite o {i+1}º número"))
-        num.append(numeros)
+for i in range(6):
+    while True:
+            numeros = int(input(f"Digite o {i+1}º número: "))
+            if numeros >= 0 and numeros % 2 == 0:
+                num.append(numeros)
+                break
 
-        for i in range(7,1):
-            print(f"{i+1}º Número: ")
+num.reverse()
+
+print(num)
