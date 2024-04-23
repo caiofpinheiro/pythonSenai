@@ -1,6 +1,6 @@
 import os
 
-os.system("clear")
+os.system("cls")
 
 notas =[]
 contador = 0
