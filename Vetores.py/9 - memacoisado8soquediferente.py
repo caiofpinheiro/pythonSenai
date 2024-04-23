@@ -6,7 +6,7 @@ contadorPar = 0
 contadorImpar = 0
 contadorPos = 0
 contadorNeg = 0
-TOTALDENUMEROS = 5
+contadorGeral = 0
 
 
 while True:
@@ -25,9 +25,15 @@ while True:
     else:
         contadorNeg +=1
 
+    if numeros < 0 or numeros > 0 or numeros % 2 == 0:
+        contadorGeral += 1
+    else:
+        contadorGeral += 1
+
 os.system("cls")
 
 print(f"Numeros Pares: {contadorPar}")
 print(f"numeros Impar: {contadorImpar}")
 print(f"Numeros Positivos: {contadorPos}")
 print(f"Numeros Negativos: {contadorNeg}")
+print(f"Total de números inseridos: {contadorGeral}")
