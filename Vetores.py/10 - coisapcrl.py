@@ -21,12 +21,12 @@ for i in range(TOTALDENUMEROS):
 
     if numeros % 2 == 0:
         par = par + 1
-        contadorPar += 1
         somaPar += par
+        contadorPar += 1
     else: 
         impar = impar + 1
-        contadorImpar += 1
         somaImpar += impar
+        contadorImpar += 1
 
     if numeros > 0:
         positivo = positivo + 1
@@ -43,7 +43,8 @@ for i in range(TOTALDENUMEROS):
 mediaPar = somaPar / contadorPar
 mediaImpar = somaImpar / contadorImpar
 somaGeral = par + impar + positivo + negativo
-mediaGeral = somaGeral / 5
+contadorGeral = contadorNeg + contadorImpar + contadorPar + contadorPos
+mediaGeral = somaGeral / contadorGeral
 
 
 print(f"Maior Número: {maiorNum}")
