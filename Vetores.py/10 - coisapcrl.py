@@ -1,6 +1,6 @@
 import os
 
-os.system("cls")
+os.system("clear")
 
 contadorPar = 0
 contadorImpar = 0
@@ -15,17 +15,26 @@ positivo = 0
 negativo = 0
 par = 0
 impar = 0
+somaGeral = 0
+contadorGeral = 0
+num = []
 
 for i in range(TOTALDENUMEROS):
+    
+    contadorGeral += 1
+    
     numeros = int(input("Digite os números: "))
+    somaGeral += numeros
+
+    num.append(numeros)
 
     if numeros % 2 == 0:
         par = par + 1
-        somaPar += par
+        somaPar = somaPar + num[i]
         contadorPar += 1
     else: 
         impar = impar + 1
-        somaImpar += impar
+        somaImpar = somaImpar +num[i]
         contadorImpar += 1
 
     if numeros > 0:
@@ -35,17 +44,16 @@ for i in range(TOTALDENUMEROS):
         negativo = negativo + 1
         contadorNeg +=1
 
-    if numeros > maiorNum:
-        maiorNum = numeros
-    if numeros < menorNum:
-        menorNum = numeros
+    if num[i] > maiorNum:
+        maiorNum = num[i]
+    if num[i] < menorNum:
+        menorNum = num[i]
 
 mediaPar = somaPar / contadorPar
 mediaImpar = somaImpar / contadorImpar
-somaGeral = par + impar + positivo + negativo
-contadorGeral = contadorNeg + contadorImpar + contadorPar + contadorPos
 mediaGeral = somaGeral / contadorGeral
 
+os.system("clear")
 
 print(f"Maior Número: {maiorNum}")
 print(f"Menor Número: {menorNum}")
@@ -58,5 +66,5 @@ print(f"Média dos Pares: {mediaPar}")
 print(f"Média dos Impares: {mediaImpar}")
 print(f"Média Geral: {mediaGeral}")
     
-for numeros in range(6, 1, -1):
-    print(numeros)
+num.reverse()
+print(num)
