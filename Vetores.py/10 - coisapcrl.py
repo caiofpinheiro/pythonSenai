@@ -49,6 +49,7 @@ for i in range(TOTALDENUMEROS):
     if num[i] < menorNum:
         menorNum = num[i]
 
+
 mediaPar = somaPar / contadorPar
 mediaImpar = somaImpar / contadorImpar
 mediaGeral = somaGeral / contadorGeral
