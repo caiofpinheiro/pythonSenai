@@ -10,6 +10,23 @@ def salvar_livros(lista):
             arquivoDeLivros.write(f"{livro.nome}, {livro.autor}, {livro.categoria}, {livro.preço} \n")
         print("Dados Gravados.")
 
+def ler_dados_catálogo(lista):
+    arquivo_origem = "Catálogo_Livros.txt"
+    listaLivros = []
+    with open(arquivo_origem, "r") as arquivo:
+        for linha in arquivo:
+          nome, autor, categoria, preço = linha.strip().split(',')
+          listaLivros.append(Livro(nome=nome, autor=autor, categoria=categoria, preço=float(preço)))
+
+    print("\n Exibindo dados.")
+    for i in listaLivros:
+        print(f"Nome: {i.nome}")
+        print(f"Autor: {i.autor}")
+        print(f"Categoria: {i.categoria}")
+        print(f"Preço: {i.preço}")
+
+         
+
 LIVROS_QTD = 3
 
 @dataclass
@@ -32,3 +49,4 @@ for i in range(LIVROS_QTD):
     livros.append(livro)
 
 salvar_livros(livros)
+ler_dados_catálogo(livros)
