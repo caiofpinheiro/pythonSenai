@@ -1,0 +1,3 @@
+seila, seila, seila, 1.0 
+seila2, seila2, seila2, 2.0 
+seia3, seila3, seila3, 3.0 

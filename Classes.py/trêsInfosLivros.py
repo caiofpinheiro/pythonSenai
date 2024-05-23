@@ -3,12 +3,6 @@ from dataclasses import dataclass
 
 os.system("clear")
 
-@dataclass
-class Livro:
-    nome: str
-    autor: str
-    categoria: str
-    preço: float
 def salvar_livros(lista):
     arquivo = "Catálogo_Livros.txt"
     with open(arquivo, "w") as arquivoDeLivros:
@@ -18,11 +12,18 @@ def salvar_livros(lista):
 
 LIVROS_QTD = 3
 
+@dataclass
+class Livro:
+    nome: str
+    autor: str
+    categoria: str
+    preço: float
+
 livros = []
 
-def Solicitando_infos_livro():
-    for i in range(LIVROS_QTD):
-        livro = Livro(
+print("Solicitando infos do livro. \n")
+for i in range(LIVROS_QTD):
+    livro = Livro(
         nome = input("Digite o nome do livro: "),
         autor = input("Digite o nome do autor do livro: "),
         categoria = input("Qual a categoria do livro? "),
@@ -30,6 +31,4 @@ def Solicitando_infos_livro():
     )
     livros.append(livro)
 
-
-Solicitando_infos_livro()
-salvar_livros()
+salvar_livros(livros)
